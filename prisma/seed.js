@@ -42,6 +42,50 @@ const prisma = new PrismaClient();
 				mission: 'Node'
       },
     });
+    const hobi = await prisma.student.upsert({
+        where: { name: 'Hobi' },
+        update: {},
+        create: {
+          name: 'Hobi',
+                  lang: 'Español',
+                  missionCommander: 'Carlo',
+                  enrollments: 2
+        },
+      });
+  
+      const hobi1 = await prisma.student.upsert({
+        where: { name: 'Hobi1' },
+        update: {},
+        create: {
+          name: 'Hobi1',
+                    lang: 'Español',
+                    missionCommander: 'Fer',
+                    enrollments: 1,
+                    hasCertification: true
+        },
+      });
+  
+      const hobi2 = await prisma.student.upsert({
+        where: { name: 'Hobi3' },
+        update: {},
+        create: {
+                    name: 'Hobi3',
+                    lang: 'German',
+                    missionCommander: 'Carlo',
+                    enrollments: 4,
+                    hasCertification: true
+        },
+      });
+  
+      const hobi3 = await prisma.student.upsert({
+        where: { name: 'Hobi3' },
+        update: {},
+        create: {
+                    name: 'Hobi3',
+                    lang: 'Español',
+                    missionCommander: 'Fer'
+        },
+      });
 
     console.log('Create 3 explorers');
   } catch(e) {
@@ -51,3 +95,4 @@ const prisma = new PrismaClient();
     await prisma.$disconnect();
   }
 })();
+
