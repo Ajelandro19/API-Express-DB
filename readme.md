@@ -12,3 +12,5 @@
 ## Inicializar Prisma
 >npx prisma init
 Información sobre npx en: https://docs.npmjs.com/cli/v7/commands/npx
+## Versionar db con Prisma (Migrations)
+>npx prisma migrate dev --name init
