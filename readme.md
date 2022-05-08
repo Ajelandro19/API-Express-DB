@@ -30,3 +30,9 @@ Información sobre npx en: https://docs.npmjs.com/cli/v7/commands/npx
 | `localhost:3000/students` | `{name: , lang: , missionCommander: }` | Crearás un nuevo student | POST |
 | `localhost:3000/students/:id` | `{missionCommander: }` | Actualizarás el MC del student con el ID dado| PUT |
 | `localhost:3000/students/:id` | `...` | Eliminarás el explorer con el ID dado | DELETE |
+
+
+
+# Preparar el servidor con CORS
+
+  1. Instalar la dependencia CORS: `npm install cors --save` 
