@@ -14,3 +14,19 @@
 Información sobre npx en: https://docs.npmjs.com/cli/v7/commands/npx
 ## Versionar db con Prisma (Migrations)
 >npx prisma migrate dev --name init
+
+
+# Endpoints
+
+| Endpoint | Request | Response | Método |
+|---|---|---|---|
+| `localhost:3000/explorers` | `...` | Deberás obtener la lista de explorers| GET|
+| `localhost:3000/explorers/:id` | `localhost:3000/v1/explorers/2` | Deberás obtener el explorer del ID proporcionado| GET |
+| `localhost:3000/explorers` | `{name: , username: , mission: }` | Crearás un nuevo explorer| POST |
+| `localhost:3000/explorers/:id` | `{mission: }` | Actualizarás la misión del explorer con el ID dado| PUT |
+| `localhost:3000/explorers/:id` | `...` | Eliminarás el explorer con el ID dado| DELETE |
+| `localhost:3000/students` | `...` | Deberás obtener la lista de students| GET |
+| `localhost:3000/students/:id` | `localhost:3000/v1/explorers/2` | Deberás obtener el student del ID proporcionado| GET |
+| `localhost:3000/students` | `{name: , lang: , missionCommander: }` | Crearás un nuevo student | POST |
+| `localhost:3000/students/:id` | `{missionCommander: }` | Actualizarás el MC del student con el ID dado| PUT |
+| `localhost:3000/students/:id` | `...` | Eliminarás el explorer con el ID dado | DELETE |
